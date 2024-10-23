@@ -10,8 +10,10 @@ A custom smart video player.
 
 https://www.youtube.com/watch?v=XgLMQZCrxTI
 
+```
 npx create-expo-app@latest --template tabs@49
 npx expo start
+```
 
 # Running the project
 
