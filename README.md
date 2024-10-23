@@ -1,2 +1,2 @@
 # smart-video-player
-A smart video player project
+A custom smart video player.
