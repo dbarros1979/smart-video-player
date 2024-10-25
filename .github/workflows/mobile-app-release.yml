@@ -1,0 +1,51 @@
+name: Build and Deploy Mobile App
+
+on:
+  release:
+    types: [published]
+
+  # Optional: Only trigger if files in `frontend/mobile-app` are modified
+  push:
+    paths:
+      - 'frontend/mobile-app/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Navigate to `frontend/mobile-app` folder
+      - name: Navigate to Mobile App Directory
+        working-directory: frontend/mobile-app
+        run: echo "Inside mobile-app directory"
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Authenticate with Expo
+      - name: Login to Expo
+        run: npx expo login --username ${{ secrets.EXPO_USERNAME }} --password ${{ secrets.EXPO_PASSWORD }}
+
+      # Build the app using EAS for Android
+      - name: Build Expo app (Android)
+        run: npx eas build --platform android --profile production
+
+      # Build the app using EAS for iOS
+      - name: Build Expo app (iOS)
+        run: npx eas build --platform ios --profile production
+
+      # Publish the app to Expo
+      - name: Publish app to Expo
+        run: npx expo publish
+
