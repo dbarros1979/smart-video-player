@@ -111,7 +111,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="User"
         options={{
-          title: 'User',
+          title: '',
           tabBarIcon: ({ color }) => <FontAwesome name="user" size={24} color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
