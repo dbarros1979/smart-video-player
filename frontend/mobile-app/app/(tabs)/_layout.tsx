@@ -22,10 +22,21 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: 'red',
+        tabBarStyle: {
+          backgroundColor: 'black',
+          borderRadius: 35,
+          height: 80,
+          paddingTop: 10,
+          margin: 10,
+          marginBottom: 15
+        },
+        headerStyle: {
+          backgroundColor: 'black'
+        }
       }}>
       <Tabs.Screen
-        name="Home"
+        name="index"
         options={{
           title: '',
           tabBarIcon: ({ color }) => <Entypo name="home" size={24} color={color} />,
