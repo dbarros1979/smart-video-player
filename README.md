@@ -13,6 +13,7 @@ https://www.youtube.com/watch?v=XgLMQZCrxTI
 ```
 npx create-expo-app@latest --template tabs@49
 npx expo start
+npm i axios
 ```
 
 # Running the project
