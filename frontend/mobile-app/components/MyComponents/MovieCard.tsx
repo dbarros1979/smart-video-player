@@ -4,7 +4,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
-const MovieCard = ({ Title }: { Title: string }) => {
+const MovieCard = ({ Title, url }: { Title: string, url: string }) => {
     return (
         <View style={{
             flex: 1,
@@ -17,8 +17,7 @@ const MovieCard = ({ Title }: { Title: string }) => {
                     width: 160,
                     height: 300,
                     borderRadius: 20
-                }}
-                    source={require('../../assets/images/movie/a-ponte-de-bambu.png')} />
+                }} source={{ uri: url }} />
             </View>
             <View style={{
                 marginVertical: 20
