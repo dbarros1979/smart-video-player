@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "title": "Vai pra Cuba, Eduardo!",
+        "description": "Vá para Cuba junto com Edu Moreira, Frei Betto e Juliana Baroni para desvendar a verdade sobre a ilha mais famosa do Caribe no primeiro documentário internacional do ICL.",
+        "imagePath": "images/vai-pra-cuba-eduardo.png"
+    },
+    {
+        "id": "2",
+        "title": "A ponte de bambu",
+        "description": "Tocando em temas que são proibidos até hoje na China, este documentário revela importantes aspectos da Revolução Cultural de Mao Tsé-Tung, como o massacre na Praça da Paz Celestial, as relações Brasil-China, e os impactos desses eventos na vida e na visão de mundo das pessoas.",
+        "imagePath": "images/a-ponte-de-bambu.png"
+    }
+]
