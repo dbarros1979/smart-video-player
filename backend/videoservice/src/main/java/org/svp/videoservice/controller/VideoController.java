@@ -12,6 +12,8 @@ import org.svp.videoservice.service.VideoService;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/videos")
 public class VideoController {
@@ -44,5 +46,11 @@ public class VideoController {
             }
         }
         return ResponseEntity.notFound().build();
+    }
+    
+    @GetMapping
+    public ResponseEntity<List<Video>> getAllVideos() {
+        List<Video> videos = videoService.getAllVideos();
+        return ResponseEntity.ok(videos);
     }
 }

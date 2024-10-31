@@ -29,14 +29,18 @@ A simple Spring Boot API to serve videos details and images from static JSON and
 
 3. **Test API Endpoints**:
 
+   - Get all videos:
+     ```bash
+     curl -v -X GET -H "Authorization: your-secret-token" http://localhost:8082/videos
+
    - Get video details by ID:
      ```bash
-     curl -X GET http://localhost:8080/videos/{id}
+     curl -v -X GET -H "Authorization: your-secret-token" http://localhost:8082/videos/{id}
      ```
 
    - Get video image by ID:
      ```bash
-     curl -X GET http://localhost:8080/videos/image/{id} --output image.jpg
+     curl -v -X GET -H "Authorization: your-secret-token" http://localhost:8082/videos/image/{id} --output image.jpg
      ```
 
 ## Project Structure
