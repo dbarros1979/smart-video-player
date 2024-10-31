@@ -13,26 +13,26 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @RestController
-@RequestMapping("/movies")
+@RequestMapping("/videos")
 public class VideoController {
 
     @Autowired
-    private VideoService movieService;
+    private VideoService videoService;
 
     private final String IMAGE_DIRECTORY = "src/main/resources/static/";
 
     @GetMapping("/{id}")
-    public ResponseEntity<Video> getMovieDetails(@PathVariable String id) {
-        Video movie = movieService.getMovieById(id);
-        return movie != null ? ResponseEntity.ok(movie) : ResponseEntity.notFound().build();
+    public ResponseEntity<Video> getVideoDetails(@PathVariable String id) {
+        Video video = videoService.getVideoById(id);
+        return video != null ? ResponseEntity.ok(video) : ResponseEntity.notFound().build();
     }
 
     @GetMapping("/image/{id}")
-    public ResponseEntity<Resource> getMovieImage(@PathVariable String id) {
-        Video movie = movieService.getMovieById(id);
-        if (movie != null) {
+    public ResponseEntity<Resource> getVideoImage(@PathVariable String id) {
+        Video video = videoService.getVideoById(id);
+        if (video != null) {
             try {
-                Path path = Paths.get(IMAGE_DIRECTORY + movie.getImagePath());
+                Path path = Paths.get(IMAGE_DIRECTORY + video.getImagePath());
                 Resource resource = new UrlResource(path.toUri());
                 if (resource.exists()) {
                     return ResponseEntity.ok()

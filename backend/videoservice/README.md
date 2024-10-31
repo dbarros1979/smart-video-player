@@ -1,10 +1,10 @@
-# Movie API
+# Video API
 
-A simple Spring Boot API to serve movie details and images from static JSON and image files. This project requires no database and relies on static JSON files for data.
+A simple Spring Boot API to serve videos details and images from static JSON and image files. This project requires no database and relies on static JSON files for data.
 
 ## Features
 
-- Serve movie details (title, description) and images from static files.
+- Serve video details (title, description) and images from static files.
 - JWT-based authentication for secure access (optional).
 - Easy to deploy on platforms like Heroku.
 
@@ -18,8 +18,8 @@ A simple Spring Boot API to serve movie details and images from static JSON and 
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/movie-api.git
-   cd movie-api
+   git clone https://github.com/your-username/video-api.git
+   cd video-api
    ```
 
 2. **Build and run the application**:
@@ -29,24 +29,24 @@ A simple Spring Boot API to serve movie details and images from static JSON and 
 
 3. **Test API Endpoints**:
 
-   - Get movie details by ID:
+   - Get video details by ID:
      ```bash
-     curl -X GET http://localhost:8080/movies/{id}
+     curl -X GET http://localhost:8080/videos/{id}
      ```
 
-   - Get movie image by ID:
+   - Get video image by ID:
      ```bash
-     curl -X GET http://localhost:8080/movies/image/{id} --output image.jpg
+     curl -X GET http://localhost:8080/videos/image/{id} --output image.jpg
      ```
 
 ## Project Structure
 
-- `src/main/resources/data/movies.json`: Static JSON file storing movie data.
-- `src/main/resources/static/images/`: Directory for storing static movie images.
-- `MovieService`: Loads and provides movie data.
-- `MovieController`: REST API to access movie details and images.
+- `src/main/resources/data/videos.json`: Static JSON file storing video data.
+- `src/main/resources/static/images/`: Directory for storing static video images.
+- `VideoService`: Loads and provides video data.
+- `VideoController`: REST API to access video details and images.
 
-## Example JSON Structure (movies.json)
+## Example JSON Structure (videos.json)
 
 ```json
 [
@@ -69,7 +69,7 @@ A simple Spring Boot API to serve movie details and images from static JSON and 
 
 1. **Create a `Procfile`** with the following content:
    ```
-   web: java -jar target/movie-api-0.0.1-SNAPSHOT.jar
+   web: java -jar target/video-api-0.0.1-SNAPSHOT.jar
    ```
 
 2. **Push to Heroku**:

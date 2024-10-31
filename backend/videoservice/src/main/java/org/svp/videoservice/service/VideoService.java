@@ -19,7 +19,7 @@ public class VideoService {
     public void init() {
         ObjectMapper mapper = new ObjectMapper();
         TypeReference<List<Video>> typeReference = new TypeReference<List<Video>>() {};
-        InputStream inputStream = getClass().getResourceAsStream("/data/videos.json");
+        InputStream inputStream = getClass().getResourceAsStream("/static/videos.json");
         try {
             videos = mapper.readValue(inputStream, typeReference);
         } catch (IOException e) {
@@ -27,11 +27,11 @@ public class VideoService {
         }
     }
 
-    public Video getMovieById(String id) {
+    public Video getVideoById(String id) {
         return videos.stream().filter(video -> video.getId().equals(id)).findFirst().orElse(null);
     }
 
-    public List<Video> getAllMovies() {
+    public List<Video> getAllVideos() {
         return videos;
     }
 }
