@@ -1,11 +1,11 @@
-package org.svp.movieservice.model;
+package org.svp.videoservice.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Movie {
+public class Video {
     private String id;
     private String title;
     private String description;

@@ -1,4 +1,4 @@
-package org.svp.movieservice.config;
+package org.svp.videoservice.config;
 
 import java.util.Arrays;
 import java.util.Collections;

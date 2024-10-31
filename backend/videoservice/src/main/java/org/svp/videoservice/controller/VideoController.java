@@ -1,4 +1,4 @@
-package org.svp.movieservice.controller;
+package org.svp.videoservice.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -6,30 +6,30 @@ import org.springframework.core.io.UrlResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.svp.movieservice.model.Movie;
-import org.svp.movieservice.service.MovieService;
+import org.svp.videoservice.model.Video;
+import org.svp.videoservice.service.VideoService;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @RestController
 @RequestMapping("/movies")
-public class MovieController {
+public class VideoController {
 
     @Autowired
-    private MovieService movieService;
+    private VideoService movieService;
 
     private final String IMAGE_DIRECTORY = "src/main/resources/static/";
 
     @GetMapping("/{id}")
-    public ResponseEntity<Movie> getMovieDetails(@PathVariable String id) {
-        Movie movie = movieService.getMovieById(id);
+    public ResponseEntity<Video> getMovieDetails(@PathVariable String id) {
+        Video movie = movieService.getMovieById(id);
         return movie != null ? ResponseEntity.ok(movie) : ResponseEntity.notFound().build();
     }
 
     @GetMapping("/image/{id}")
     public ResponseEntity<Resource> getMovieImage(@PathVariable String id) {
-        Movie movie = movieService.getMovieById(id);
+        Video movie = movieService.getMovieById(id);
         if (movie != null) {
             try {
                 Path path = Paths.get(IMAGE_DIRECTORY + movie.getImagePath());
