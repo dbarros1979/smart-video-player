@@ -1,0 +1,69 @@
+# Maven output
+target/
+*.jar
+*.war
+*.ear
+
+# Compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# IDE-specific files
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Generated files
+.mvn/timing.properties
+node_modules/
+dist/
+out/
+build/
+tmp/
+
+# Specific files
+# Environment and credential files (adjust for your needs)
+.env
+.secret
+*.pem
+*.key
+*.crt
+
+
+# Maven Wrapper files to keep in version control
+!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.properties
+!.mvn/wrapper/MavenWrapperDownloader.java
+
+# Ignore other files in the .mvn directory (e.g., local settings)
+.mvn/*
+!.mvn/wrapper/
+

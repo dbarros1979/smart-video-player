@@ -1,0 +1,25 @@
+# Set line endings to LF (Unix-style) for all files
+* text eol=lf
+
+# Treat Java files as text
+*.java text
+
+# Treat configuration files as text
+*.properties text
+*.xml text
+*.yaml text
+*.yml text
+
+# Treat build files as binary
+*.jar binary
+*.war binary
+*.ear binary
+
+# Use a custom diff algorithm for Java files
+*.java diff=java
+
+# Use a custom diff algorithm for configuration files
+*.properties diff=java
+*.xml diff=xml
+*.yaml diff=yaml
+*.yml diff=yaml
