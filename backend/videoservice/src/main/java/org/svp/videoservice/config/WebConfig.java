@@ -1,5 +1,6 @@
 package org.svp.videoservice.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -7,14 +8,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    private final AuthInterceptor authInterceptor;
-
-    public WebConfig(AuthInterceptor authInterceptor) {
-        this.authInterceptor = authInterceptor;
-    }
+    @Autowired
+    private AuthInterceptor authInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(authInterceptor).addPathPatterns("/**");
+        registry.addInterceptor(authInterceptor);
     }
 }
