@@ -10,5 +10,6 @@ public class Video {
     private String title;
     private String description;
     private String imagePath;
+    private byte[] image;
 }
 
