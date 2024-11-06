@@ -41,7 +41,7 @@ function PromotionBanner() {
           <TouchTextIcon
             icon={icon}
             onPress={() => setAdded(!added)}
-            text="My List"
+            text="Minha Lista"
           />
 
           <PromotionPlay onPress={() => null} />

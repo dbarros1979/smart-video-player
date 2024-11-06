@@ -23,7 +23,7 @@ function PromotionPlay({ icon, onPress, text }) {
 
 PromotionPlay.defaultProps = {
   icon: <SvgPlay />,
-  text: 'Play'
+  text: 'Assistir'
 };
 
 PromotionPlay.propTypes = {
