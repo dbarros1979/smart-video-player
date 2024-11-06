@@ -6,7 +6,7 @@ const headers = {
 
 export async function fetchVideoById(id) {
     try {
-        console.debug(`Calling videos API for video ID: ${id}`);
+        console.debug(`Calling videos API for video ID: ${id} at ${BASE_URL}/videos/${id}`);
         const response = await fetch(`${BASE_URL}/videos/${id}`, { headers });
         if (!response.ok) throw new Error(`Failed to fetch video with ID: ${id}`);
         return await response.json();
@@ -18,7 +18,7 @@ export async function fetchVideoById(id) {
 
 export async function fetchAllVideos() {
     try {
-        console.debug("Calling videos API to fetch all videos...");
+        console.debug(`Calling videos API to fetch all videos at ${BASE_URL}/videos`);
         const response = await fetch(`${BASE_URL}/videos`, { headers });
         if (!response.ok) throw new Error('Failed to fetch all videos');
         return await response.json();

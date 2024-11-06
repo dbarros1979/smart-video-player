@@ -48,18 +48,18 @@ function HeaderHome({ all, show }) {
         {all && (
           <React.Fragment>
             <TouchText
-              onPress={() => navigation.navigate('TvShows')}
-              text="TV Shows"
+              onPress={() => navigation.navigate('TvSeries')}
+              text="Séries"
               textStyle={styles.text}
             />
             <TouchText
-              onPress={() => navigation.navigate('Movies')}
-              text="Movies"
+              onPress={() => navigation.navigate('Documentaries')}
+              text="Documentários"
               textStyle={styles.text}
             />
             <TouchText
               onPress={() => navigation.navigate('MyList')}
-              text="My List"
+              text="Minha Lista"
               textStyle={styles.text}
             />
           </React.Fragment>

@@ -6,7 +6,7 @@ import { gStyle } from '../constants';
 import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
 
-function Movies() {
+function Documentaries() {
   return (
     <View style={gStyle.container}>
       <HeaderHome show />
@@ -14,7 +14,7 @@ function Movies() {
       <View style={gStyle.spacer12} />
 
       <View style={gStyle.pHHalf}>
-        <Text style={gStyle.heading}>Movies</Text>
+        <Text style={gStyle.heading}>Documentários</Text>
       </View>
 
       <Cast />
@@ -22,4 +22,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default Documentaries;

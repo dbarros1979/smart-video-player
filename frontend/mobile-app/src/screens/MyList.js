@@ -14,7 +14,7 @@ function MyList() {
       <View style={gStyle.spacer12} />
 
       <View style={gStyle.pHHalf}>
-        <Text style={gStyle.heading}>My List</Text>
+        <Text style={gStyle.heading}>Minha Lista</Text>
       </View>
 
       <Cast />

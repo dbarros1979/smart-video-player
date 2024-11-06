@@ -34,13 +34,9 @@ function PromotionBanner() {
 
   return (
     <View>
-      {/* Main image */}
       <Image source={imageUri ? { uri: imageUri } : null} style={styles.imageBackground} />
 
-      {/* Content below the main image */}
       <View style={styles.containerContent}>
-
-
         <View style={gStyle.flexRowSpace}>
           <TouchTextIcon
             icon={icon}

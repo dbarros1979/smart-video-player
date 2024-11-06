@@ -3,8 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
 import HomeScreen from '../screens/Home';
-import TvShowsScreen from '../screens/TvShows';
-import MoviesScreen from '../screens/Movies';
+import TvSeriesScreen from '../screens/TvSeries';
+import DocumentariesScreen from '../screens/Documentaries';
 import MyListScreen from '../screens/MyList';
 
 const Stack = createNativeStackNavigator();
@@ -21,16 +21,16 @@ function StackHome() {
         }}
       />
       <Stack.Screen
-        name="TvShows"
-        component={TvShowsScreen}
+        name="TvSeries"
+        component={TvSeriesScreen}
         options={{
           animationEnabled: false,
           headerShown: false
         }}
       />
       <Stack.Screen
-        name="Movies"
-        component={MoviesScreen}
+        name="Documentaries"
+        component={DocumentariesScreen}
         options={{
           animationEnabled: false,
           headerShown: false
