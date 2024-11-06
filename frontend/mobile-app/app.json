@@ -1,39 +1,37 @@
 {
   "expo": {
-    "name": "mobile-app",
-    "slug": "mobile-app",
-    "version": "1.0.0",
+    "name": "A custom smart video player",
+    "description": "A custom smart video player with React Native & Expo",
+    "scheme": "smartvideoplayer",
+    "slug": "smartvideoplayer",
+    "privacy": "public",
+    "version": "0.0.1",
+    "platforms": [
+      "android",
+      "ios",
+      "web"
+    ],
+    "githubUrl": "https://github.com/dbarros1979/smart-video-player",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
+    "primaryColor": "#000000",
+    "icon": "src/assets/images/icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000",
+      "image": "src/assets/images/splash.png",
+      "resizeMode": "contain"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "versionCode": 2
     },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      "expo-router"
-    ],
-    "experiments": {
-      "typedRoutes": true
+    "ios": {
+      "buildNumber": "0.0.1",
+      "supportsTablet": true
     }
   }
 }
