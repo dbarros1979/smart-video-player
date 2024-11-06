@@ -10,7 +10,7 @@ function StackSearch() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Search"
+        name="Pesquisar"
         component={SearchScreen}
         options={{
           headerShown: false

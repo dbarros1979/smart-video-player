@@ -43,14 +43,14 @@ function TabNavigation() {
         name="StackHome"
         component={StackHome}
         options={{
-          tabBarLabel: 'Home'
+          tabBarLabel: 'Início'
         }}
       />
       <Tab.Screen
         name="StackSearch"
         component={StackSearch}
         options={{
-          tabBarLabel: 'Search'
+          tabBarLabel: 'Pesquisar'
         }}
       />
       <Tab.Screen
@@ -64,7 +64,7 @@ function TabNavigation() {
         name="StackMore"
         component={StackMore}
         options={{
-          tabBarLabel: 'More'
+          tabBarLabel: 'Mais'
         }}
       />
     </Tab.Navigator>

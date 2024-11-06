@@ -41,7 +41,7 @@ function ShowScroller({ type }) {
 
         if (item.image) {
           renderItem = (
-            <Image source={{ uri: item.image }} style={styles[`${type}Image`]} />
+            <Image source={{ uri: `data:image/png;base64,${item.image}` }} style={styles[`${type}Image`]} />
           );
         }
 

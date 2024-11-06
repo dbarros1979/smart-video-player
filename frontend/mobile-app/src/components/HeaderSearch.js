@@ -75,7 +75,7 @@ function HeaderSearch() {
           onBlur={onBlur}
           onChangeText={(input) => setText(input)}
           onFocus={onFocus}
-          placeholder="Search"
+          placeholder="Pesquisar"
           placeholderTextColor={colors.searchIcon}
           selectionColor={colors.brandPrimary}
           style={[styles.input, inputOverride]}
