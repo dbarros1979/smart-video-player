@@ -8,6 +8,7 @@ import Cast from '../components/Cast';
 import HeaderHome from '../components/HeaderHome';
 import PromotionBanner from '../components/PromotionBanner';
 import ShowScroller from '../components/ShowScroller';
+import ShowScrollerStatic from '../components/ShowScrollerStatic';
 
 function Home() {
   // on active tab press, scroll to top
@@ -46,13 +47,13 @@ function Home() {
       >
         <PromotionBanner />
 
-        <Text style={gStyle.heading}>Novidades</Text>
-        <ShowScroller dataset="previews" type="round" />
+        <Text style={gStyle.heading}>Personagens</Text>
+        <ShowScrollerStatic dataset="personas" type="round" />
 
         <Text style={gStyle.heading}>Principais escolhas para você</Text>
         <ShowScroller dataset="myList" />
 
-        <Text style={gStyle.heading}>Novidades no SVP</Text>
+        <Text style={gStyle.heading}>Novidades</Text>
         <ShowScroller />
 
         <Text style={gStyle.heading}>Séries</Text>

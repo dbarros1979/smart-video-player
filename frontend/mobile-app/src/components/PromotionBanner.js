@@ -22,8 +22,6 @@ function PromotionBanner() {
     async function loadVideo() {
       const videoData = await fetchVideoById("1");
       if (videoData) {
-        console.debug("showing title");
-        console.debug(videoData.title);
         setVideo(videoData);
       }
     }
