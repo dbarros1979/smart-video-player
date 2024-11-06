@@ -46,25 +46,22 @@ function Home() {
       >
         <PromotionBanner />
 
-        <Text style={gStyle.heading}>Previews</Text>
+        <Text style={gStyle.heading}>Novidades</Text>
         <ShowScroller dataset="previews" type="round" />
 
-        <Text style={gStyle.heading}>My List</Text>
+        <Text style={gStyle.heading}>Principais escolhas para você</Text>
         <ShowScroller dataset="myList" />
 
-        <Text style={gStyle.heading}>Popular on Netflix</Text>
+        <Text style={gStyle.heading}>Novidades no SVP</Text>
         <ShowScroller />
 
-        <Text style={gStyle.heading}>Trending Now</Text>
+        <Text style={gStyle.heading}>Séries</Text>
         <ShowScroller />
 
-        <Text style={gStyle.heading}>Watch It Again</Text>
+        <Text style={gStyle.heading}>Documentários</Text>
         <ShowScroller />
 
-        <Text style={gStyle.heading}>NETFLIX ORIGINALS</Text>
-        <ShowScroller />
-
-        <Text style={gStyle.heading}>Documentaries</Text>
+        <Text style={gStyle.heading}>Minha Lista</Text>
         <ShowScroller />
 
         <View style={gStyle.spacer3} />
